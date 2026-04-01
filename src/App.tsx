@@ -171,7 +171,7 @@ const Navbar = ({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 transition-all duration-500 z-[9999] pointer-events-none ${!isHome || scrolled ? 'py-4 bg-black/90 backdrop-blur-2xl border-b border-white/10' : 'py-6 bg-transparent border-b border-transparent'}`}
+      className={`fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 transition-all duration-500 z-9999 pointer-events-none ${!isHome || scrolled ? 'py-4 bg-black/90 backdrop-blur-2xl border-b border-white/10' : 'py-6 bg-transparent border-b border-transparent'}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -2000,7 +2000,7 @@ const MobileOverlayMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-3xl z-[99998] pointer-events-auto"
+            className="fixed inset-0 bg-black/60 backdrop-blur-3xl z-99998 pointer-events-auto"
             onClick={onClose}
           />
           <motion.div
@@ -2008,7 +2008,7 @@ const MobileOverlayMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 200 }}
-            className="fixed top-0 left-0 w-full bg-black z-[99999] p-12 pt-40 flex flex-col items-center pointer-events-auto rounded-b-[40px] border-b border-white/5"
+            className="fixed top-0 left-0 w-full bg-black z-99999 p-12 pt-40 flex flex-col items-center pointer-events-auto rounded-b-[40px] border-b border-white/5"
           >
             <button 
               onClick={onClose}
